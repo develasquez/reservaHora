@@ -19,7 +19,7 @@ function validaParam($param){
 	$valida = strpos(strtoupper($param),"INSERT") +  strpos(strtoupper($param),"UPDATE") + strpos(strtoupper($param),"DELETE") + strpos(strtoupper($param),"DROP") ; 
   echo "valida:" . $valida."\n"; 
 
-	if($valida == 0){
+	if($valida != 0){
 		return $param;
 	}else{
 		return "noValido";
