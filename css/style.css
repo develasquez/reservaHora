@@ -706,52 +706,26 @@ margin: 0px 0 0px 2% !important;
 /* @media screen and (max-device-width: 480px){ */
 @media screen and (max-width: 480px){
 
-  .content-secondary{
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .content-primary{
-    display: none;
+#horas2{
 
-  }
+  display: inline-block;
+}
 }
 @media only screen and (max-width: 700px) {
 
- .content-secondary{
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .content-primary{
+ #horas2{
 
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    padding-left: 10%;
-    min-width:100%; 
-    width: auto; 
-  }
-  .labelsGrafico{
-
-    margin-bottom: 25px;
-  }
+  display: block;
+}
 
 }
 
 @media only screen and (max-width: 600px) {
 
- .content-secondary{
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .content-primary{
-    display: none;
+#horas2{
 
-  }
+  display: block;
+}
 
 }
 
@@ -761,25 +735,10 @@ margin: 0px 0 0px 2% !important;
 
 @media only screen and (width: 768px) {
 
-   .content-secondary{
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .content-primary{
+ #horas2{
 
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    padding-left: 10%;
-    min-width:100%; 
-    width: auto; 
-  }
-  .labelsGrafico{
-
-    margin-bottom: 25px;
-  }
-
+  display: block;
+}
   
 }
 
@@ -788,49 +747,21 @@ margin: 0px 0 0px 2% !important;
 /* For portrait layouts only */
 /* @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
-   .content-secondary{
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .content-primary{
+#horas2{
 
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    padding-left: 25px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .labelsGrafico{
-
-    margin-bottom: 25px;
-  }
+  display: block;
+}
 
 }
 
 /* For landscape layouts only */
 /* @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) { */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:landscape) {
-      .content-secondary{
-    width: 100%
-    margin: 0px 0px 0px 0px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .content-primary{
+#horas2{
 
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    padding-left: 25px;
-    min-width:100%; 
-    width: auto; 
-  }
-  .labelsGrafico{
+  display: block;
+}
 
-    margin-bottom: 25px;
-  }
-   
 }
 
 
@@ -862,6 +793,7 @@ margin: 0px 0 0px 2% !important;
  /* border: solid 1px #c2c2c2;*/
  
   display: inline-block;
+  min-width: 320px;
   width:45%; 
 }
 
@@ -894,7 +826,10 @@ margin: 0px 0 0px 2% !important;
   border-radius: 4px;
   height:80%;
   text-align: center;
-  visibility: hidden;
   width:97%;
 
+}
+.oculto{
+
+  visibility: hidden;
 }

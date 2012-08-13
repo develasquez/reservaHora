@@ -6,21 +6,25 @@ var bloque;
 
 $(function(){
 
-$(".btnAtras").on("click",function(){
-	$(".ui-overlay").hide();
-	$("#frmReserva_content").hide();
-})
-
-$(".btnAccion").on("click",function(){
-	$(".ui-overlay").hide();
-	$("#frmReserva_content").hide();
+$("#frmDatos").on("submit",function(){
 	$(bloque).data({
 		nombre:$("#txtNombreSolicitante").val(),
 		email:$("#txtEmail").val(),
 		telefono:$("#txtTelefono").val(),
 		notas:$("#tarNotas").val()
-	}).children().removeClass("bloque-ocupado")
+	}).children().removeClass("oculto")
+	$(".ui-overlay").hide();
+	$("#frmReserva_content").hide();
+	return false;
 })
+
+
+$(".btnAtras").on("click",function(){
+	$(".ui-overlay").hide();
+	$("#frmReserva_content").hide();
+})
+
+
 
 $(".bloque").on("click",function(){
 	$(".ui-overlay").show();
