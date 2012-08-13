@@ -47,7 +47,7 @@ switch ($metodo) {
     	$query ="SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas FROM horas";
     	$result=mysql_query($query,$link); 
     	$rows = array();
-    	$rows = mysql_fetch_array($result) 
+    	$rows = mysql_fetch_array($result) ;
     	echo json_encode($rows);
 		}
       break;
