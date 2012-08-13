@@ -44,7 +44,7 @@ switch ($metodo) {
 				 "VALUES (".$idHora.",".$idSala.",".$dia.",".$hora.",".$nombreSolicitante.",".$mailSolicitante.",".$telefonoSolicitante.",".$notas.")"	;
     	$link = Conectarse();
     	$result=mysql_query($query,$link); 
-    	$query ="SELECT `idHora`, `idSala`, `dia`, `hora`, `nombreSolicitante`, `mailSolicitante`, `telefonoSolicitante`, `notas` FROM `horas`"
+    	$query ="SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas FROM horas";
     	$result=mysql_query($query,$link); 
     	$rows = array();
     	$rows = mysql_fetch_array($result) 
