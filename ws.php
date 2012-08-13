@@ -15,11 +15,8 @@ function Conectarse()
    return $link; 
 }
 function validaParam($param){
-  echo "calidaParam(".$param.")\n";
-	$valida = strpos(strtoupper($param),"INSERT") +  strpos(strtoupper($param),"UPDATE") + strpos(strtoupper($param),"DELETE") + strpos(strtoupper($param),"DROP") ; 
-  echo "valida:" . $valida."\n"; 
-
-	if($valida != 0){
+  $valida = strpos(strtoupper($param),"INSERT") +  strpos(strtoupper($param),"UPDATE") + strpos(strtoupper($param),"DELETE") + strpos(strtoupper($param),"DROP") ; 
+  if($valida != 0){
 		return $param;
 	}else{
 		return "noValido";
