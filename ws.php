@@ -2,7 +2,7 @@
 function Conectarse() 
 { 
    
-   if (!($link=mysql_connect("localhost","linode","devenew1"))) 
+   if (!($link=mysql_connect("localhost","root","devenew1"))) 
    { 
       echo '{"success":true, "data":[], "errors":"Error al conectar con la Base de Datos" }'; 
       exit(); 
@@ -62,6 +62,23 @@ switch ($metodo) {
 
   
 		}
+    break;
+    case "obtieneHoras":
+
+      $idSala = validaParam($_GET["idSala"]);
+      $dia = validaParam($_GET["dia"]);
+    
+    if($idSala != "noValido" || $dia != "noValido"){
+      $query = "SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas , numeroHora FROM horas ".
+       " Where idSala=" .$idSala . " and dia=". $dia ;
+      $link = Conectarse();
+      $result=mysql_query($query,$link); 
+      $arr = array();
+      while ($obj = mysql_fetch_object($result)) {
+        $arr[] = $obj;
+      }
+      echo json_encode($arr[]) ;
+    }
       break;
     case 2:
         echo "i equals 2";
