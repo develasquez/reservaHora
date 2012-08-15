@@ -95,9 +95,15 @@ $(".btnAtras").on("click",function(){
 
 
 $(".bloque").on("click",function(){
+	bloque = $(this)
+	if($(this).children().hasClass("oculto")){
+
 	$(".ui-overlay").show();
 	$("#frmReserva_content").show();
-	bloque = $(this)
+	
+	var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idHora")) - 9 : parseInt($(bloque).attr("idHora")))
+	$("#txthora").val($($("#horas1 div")[idHora-1]).text().trim())
+	}
 
 })
 
@@ -130,7 +136,15 @@ $.ajax({
 		$.each(data,function(i,e){
 			debugger;
 			var idBloque="#bloque"+ e.numeroHora +"_dia" + e.dia
-	$(idBloque).children().removeClass("oculto")
+	$(idBloque).data({
+		nombre:e.nombreSolicitante,
+		email:e.mailSolicitante,
+		telefono:e.telefonoSolicitante,
+		empresa:e.empresa,
+		cargo:e.cargo,
+		notas:e.notas
+	})
+	.children().removeClass("oculto")
 		})
 	
 	
