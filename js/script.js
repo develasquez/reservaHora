@@ -103,10 +103,10 @@ $.ajax({
 	dataType: "json",
 	type: "GET",
 	contentType: "application/json; charset=utf-8",
-	data: JSON.stringify({
+	data:{
 		metodo:"leeHoras",
 		idSala:pIdSala
-	}),
+	},
 	success: function (data) {
 		debugger;
 	data = data;
