@@ -781,21 +781,43 @@ margin: 0px 0 0px 2% !important;
   width:80%;
 
 }
+#banner{
 
+background-image: url("../img/banner.jpg");
+
+margin-top: -33px;
+padding-top: 46px;
+background-repeat: no-repeat;
+background-position: center;
+}
 #salas{
-  height: 85px;
+
+ height: 85px;
 overflow: hidden;
-width: 602px;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-         -o-user-select: none;
-            user-select: none;
+width: 500px;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+margin-top: -44px;
 }
 #sala1{
 
-  background-color: #A9F5BC;
+ background-image: linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
+background-image: -o-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
+background-image: -moz-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
+background-image: -webkit-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
+background-image: -ms-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
+
+background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.26, rgb(75,112,204)),
+  color-stop(0.51, rgb(47,93,186))
+);
 
 }
 #sala2{
@@ -818,8 +840,10 @@ width: 602px;
   background-color: #F3E2A9;
   
 }
+
 #contenido_salas{
-  position: relative;
+ 
+position: relative;
 float: left;
 left: 0px;
 width: 3500px;
@@ -828,14 +852,14 @@ width: 3500px;
 -o-transition: all 1.0s ease-in-out;
 transition: all 1.0s ease-in-out;
 overflow: hidden;
-
 }
 
 .sala{
- border: solid 1px #CCC;
+/*border: solid 1px #CCC;*/
+color:#fff;
 border-radius: 4px;
 height: 80px;
-width: 600px;
+width: 500px;
 float: left;
 }
 

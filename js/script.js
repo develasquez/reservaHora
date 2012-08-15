@@ -19,11 +19,11 @@ $(function(){
 		posFin = a.pageX;
 		var pos = parseInt($("#contenido_salas").css("left") ) ;
 
-		if ((posInicio - posFin)> 10 && pos !=-2408  ) {
+		if ((posInicio - posFin)> 10 && pos !=-2000  ) {
 			nroSala++;
 			posInicio =0;
 			posFin=0;
-			pos = pos - 602;
+			pos = pos - 500;
 			$("#contenido_salas").css("left",pos+"px")	;
 			$(".bloque").children().addClass("oculto");
 			leeHoras(nroSala);
@@ -33,7 +33,7 @@ $(function(){
 			nroSala--;
 			posInicio =0;
 			posFin=0;
-			pos = pos + 602;
+			pos = pos + 500;
 
 			$("#contenido_salas").css("left",pos+"px")	;
 			$(".bloque").children().addClass("oculto");
