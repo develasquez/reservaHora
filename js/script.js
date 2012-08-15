@@ -52,6 +52,7 @@ $("#frmDatos").on("submit",function(){
 	reservaHora();
 	$(".ui-overlay").hide();
 	$("#frmReserva_content").hide();
+	debugger;
 	return false;
 })
  $("#dia1").on("click",function(){
@@ -115,6 +116,8 @@ $.ajax({
 	});
 
 }
+
+
 
 function reservaHora(){
 
