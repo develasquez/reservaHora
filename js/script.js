@@ -41,11 +41,10 @@ $(function(){
 	});
 	
 
-
-
-
-$("#frmDatos").on("submit",function(){
-	debugger;
+function creaBloque(){
+if($("#txtNombreSolicitante").val().length==0 || $("#txtEmail").val().length==0 || $("#txtTelefono").val().length==0 || $("#txtEmpresa").val().length==0 || $("#txtCargo").val().length==0 ){
+alert("Debe ingresar la informacion requerida");
+}else{
 	$(bloque).data({
 		nombre:$("#txtNombreSolicitante").val(),
 		email:$("#txtEmail").val(),
@@ -53,8 +52,16 @@ $("#frmDatos").on("submit",function(){
 		notas:$("#tarNotas").val()
 	}).children().removeClass("oculto")
 	reservaHora();
+	$(".ui-overlay").hide();
+	$("#frmReserva_content").hide();
 	return false;
-	
+}
+}
+
+
+$("#frmDatos").submit(function(){
+
+	return false;
 })
  $("#dia1").on("click",function(){
  	dia=1;
@@ -72,7 +79,9 @@ $(".bloque").on("click",function(){
  	hora=$(this).attr("idHora");
  })
 
-
+$(".btnAccion").on("mouseup",function(){
+	creaBloque();
+})
 $(".btnAtras").on("click",function(){
 	$(".ui-overlay").hide();
 	$("#frmReserva_content").hide();
