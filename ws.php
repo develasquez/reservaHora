@@ -77,7 +77,7 @@ switch ($metodo) {
       while ($obj = mysql_fetch_object($result)) {
         $arr[] = $obj;
       }
-      echo json_encode($arr[]) ;
+      echo json_encode($arr) ;
     }
       break;
     case 2:
