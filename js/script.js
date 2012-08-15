@@ -104,6 +104,8 @@ $(".bloque-ocupado").on("click",function(){
 	$("#frmReserva_content").hide();
 })
 
+leeHoras(nroSala);
+
 });
 
 function marcaHora(myHora){
