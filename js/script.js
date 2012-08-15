@@ -5,6 +5,8 @@
 var bloque, nroSala =1, dia , hora, mouseDown, posInicio, posFin;
 
 $(function(){
+	$(".ui-overlay").hide();
+	$("#frmReserva_content").hide();
 	$(".sala").on('mousedown',function(a,b,c){
 		
 		mouseDown=true;
