@@ -63,14 +63,14 @@ switch ($metodo) {
   
 		}
     break;
-    case "leeHoras":
+    case "obtieneHoras":
 
       $idSala = validaParam($_GET["idSala"]);
       $dia = validaParam($_GET["dia"]);
     
     if($idSala != "noValido" || $dia != "noValido"){
       $query = "SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas , numeroHora FROM horas ".
-       " Where idSala=" .$idSala . " and dia=". $dia ;
+       " Where idSala=" .$idSala . " ;" ;
       $link = Conectarse();
       $result=mysql_query($query,$link); 
       $arr = array();
