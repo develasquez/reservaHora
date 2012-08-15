@@ -101,7 +101,7 @@ function leeHoras(pIdSala){
 $.ajax({
 	url: "ws.php",
 	dataType: "json",
-	type: "POST",
+	type: "GET",
 	contentType: "application/json; charset=utf-8",
 	data: JSON.stringify({
 		metodo:"leeHoras",
