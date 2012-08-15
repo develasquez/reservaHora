@@ -43,6 +43,7 @@ $(function(){
 
 
 $("#frmDatos").on("submit",function(){
+	debugger;
 	$(bloque).data({
 		nombre:$("#txtNombreSolicitante").val(),
 		email:$("#txtEmail").val(),
@@ -52,7 +53,7 @@ $("#frmDatos").on("submit",function(){
 	reservaHora();
 	$(".ui-overlay").hide();
 	$("#frmReserva_content").hide();
-	debugger;
+
 	return false;
 })
  $("#dia1").on("click",function(){
