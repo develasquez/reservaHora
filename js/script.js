@@ -123,8 +123,12 @@ $.ajax({
 	},
 	success: function (data) {
 		debugger;
-	var idBloque="#bloque"+ data.numeroHora +"_dia" + data.dia
+		$.each(data,function(i,e){
+			debugger;
+			var idBloque="#bloque"+ e.numeroHora +"_dia" + e.dia
 	$(idBloque).children().removeClass("oculto")
+		})
+	
 	
 	}
 	});
