@@ -39,7 +39,7 @@ $(function(){
 	});
 	
 
-	
+
 
 
 $("#frmDatos").on("submit",function(){
@@ -99,7 +99,7 @@ function marcaHora(myHora){
 function leeHoras(pIdSala){
 
 $.ajax({
-	url: "we.php",
+	url: "ws.php",
 	dataType: "json",
 	type: "POST",
 	contentType: "application/json; charset=utf-8",
