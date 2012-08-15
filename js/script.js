@@ -23,7 +23,7 @@ $(function(){
 			nroSala++;
 			posInicio =0;
 			posFin=0;
-			pos = pos - 500;
+			pos = pos - 502;
 			$("#contenido_salas").css("left",pos+"px")	;
 			$(".bloque").children().addClass("oculto");
 			leeHoras(nroSala);
@@ -33,7 +33,7 @@ $(function(){
 			nroSala--;
 			posInicio =0;
 			posFin=0;
-			pos = pos + 500;
+			pos = pos + 502;
 
 			$("#contenido_salas").css("left",pos+"px")	;
 			$(".bloque").children().addClass("oculto");

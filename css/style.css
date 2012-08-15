@@ -19,6 +19,7 @@ body {
   background: #ffffff ;
   padding: 0;
   margin: 0;
+  font-family: helvetica;
 }
 a, a:visited { 
   outline: none 
@@ -501,7 +502,7 @@ table {
    -------------------------------- */
 
 body {
-  font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+  font-family: "Helvetica", "Arial",  "Verdana", "sans-serif";
 }
 
 
@@ -794,7 +795,7 @@ background-position: center;
 
  height: 85px;
 overflow: hidden;
-width: 500px;
+width: 502px;
 -webkit-user-select: none;
 -khtml-user-select: none;
 -moz-user-select: none;
@@ -803,43 +804,8 @@ width: 500px;
 user-select: none;
 margin-top: -44px;
 }
-#sala1{
 
- background-image: linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
-background-image: -o-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
-background-image: -moz-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
-background-image: -webkit-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
-background-image: -ms-linear-gradient(bottom, rgb(75,112,204) 26%, rgb(47,93,186) 51%);
 
-background-image: -webkit-gradient(
-  linear,
-  left bottom,
-  left top,
-  color-stop(0.26, rgb(75,112,204)),
-  color-stop(0.51, rgb(47,93,186))
-);
-
-}
-#sala2{
-
-  background-color: #A9E2F3;
-  
-}
-#sala3{
-
-  background-color: #E1F5A9;
-  
-}
-#sala4{
-
-  background-color: #F5A9BC;
-  
-}
-#sala5{
-
-  background-color: #F3E2A9;
-  
-}
 
 #contenido_salas{
  
@@ -855,7 +821,7 @@ overflow: hidden;
 }
 
 .sala{
-/*border: solid 1px #CCC;*/
+border: solid 1px #fff;
 color:#fff;
 border-radius: 4px;
 height: 80px;
