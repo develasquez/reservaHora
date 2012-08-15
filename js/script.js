@@ -53,10 +53,8 @@ $("#frmDatos").on("submit",function(){
 		notas:$("#tarNotas").val()
 	}).children().removeClass("oculto")
 	reservaHora();
-	$(".ui-overlay").hide();
-	$("#frmReserva_content").hide();
-
 	return false;
+	
 })
  $("#dia1").on("click",function(){
  	dia=1;
