@@ -781,14 +781,68 @@ margin: 0px 0 0px 2% !important;
   width:80%;
 
 }
-#horas2{
 
-  display: none;
+#salas{
+  height: 85px;
+overflow: hidden;
+width: 602px;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+#sala1{
+
+  background-color: #A9F5BC;
+
+}
+#sala2{
+
+  background-color: #A9E2F3;
+  
+}
+#sala3{
+
+  background-color: #E1F5A9;
+  
+}
+#sala4{
+
+  background-color: #F5A9BC;
+  
+}
+#sala5{
+
+  background-color: #F3E2A9;
+  
+}
+#contenido_salas{
+  position: relative;
+float: left;
+left: 0px;
+width: 3500px;
+-webkit-transition: all 1.0s ease-in-out;
+-moz-transition: all 1.0s ease-in-out;
+-o-transition: all 1.0s ease-in-out;
+transition: all 1.0s ease-in-out;
+overflow: hidden;
+
+}
+
+.sala{
+ border: solid 1px #CCC;
+border-radius: 4px;
+height: 80px;
+width: 600px;
+float: left;
 }
 
 .tituloDia{
 
 }
+
 .dia{
  /* border: solid 1px #c2c2c2;*/
  

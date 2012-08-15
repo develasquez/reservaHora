@@ -2,9 +2,45 @@
 
 */
 
-var bloque, sala =1, dia , hora;
+var bloque, nroSala =1, dia , hora, mouseDown, posInicio, posFin;
 
 $(function(){
+	$(".sala").on('mousedown',function(a,b,c){
+		
+		mouseDown=true;
+		posInicio = a.pageX;
+
+	});
+	$(".sala").on('mouseup',function(a,b,c){
+		
+		mouseDown=false;
+		posFin = a.pageX;
+		var pos = parseInt($("#contenido_salas").css("left") ) ;
+		if ((posInicio - posFin)> 10 && pos !=-2408  ) {
+			nroSala++;
+			posInicio =0;
+			posFin=0;
+			pos = pos - 602;
+			$("#contenido_salas").css("left",pos+"px")	;
+			leeHoras(nroSala);
+			return true;
+		}
+		if (( posFin - posInicio )> 10 && pos !=0) {
+			nroSala--;
+			posInicio =0;
+			posFin=0;
+			pos = pos + 602;
+
+			$("#contenido_salas").css("left",pos+"px")	;
+			leeHoras(nroSala);
+			return true;
+		}
+		
+	});
+	
+
+	
+
 
 $("#frmDatos").on("submit",function(){
 	$(bloque).data({
