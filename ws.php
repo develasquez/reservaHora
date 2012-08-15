@@ -66,7 +66,7 @@ switch ($metodo) {
     case "obtieneHoras":
 
       $idSala = validaParam($_GET["idSala"]);
-      $dia = validaParam($_GET["dia"]);
+    
     
     if($idSala != "noValido" || $dia != "noValido"){
       $query = "SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas , numeroHora FROM horas ".
