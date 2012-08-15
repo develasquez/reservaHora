@@ -18,12 +18,14 @@ $(function(){
 		mouseDown=false;
 		posFin = a.pageX;
 		var pos = parseInt($("#contenido_salas").css("left") ) ;
+
 		if ((posInicio - posFin)> 10 && pos !=-2408  ) {
 			nroSala++;
 			posInicio =0;
 			posFin=0;
 			pos = pos - 602;
 			$("#contenido_salas").css("left",pos+"px")	;
+			$(".bloque").children().addClass("oculto");
 			leeHoras(nroSala);
 			return true;
 		}
@@ -34,6 +36,7 @@ $(function(){
 			pos = pos + 602;
 
 			$("#contenido_salas").css("left",pos+"px")	;
+			$(".bloque").children().addClass("oculto");
 			leeHoras(nroSala);
 			return true;
 		}
@@ -120,7 +123,8 @@ $.ajax({
 	},
 	success: function (data) {
 		debugger;
-	data = data;
+	var idBloque="#bloque"+ data.numeroHora +"_dia" + data.dia
+	$(idBloque).children().removeClass("oculto")
 	
 	}
 	});
