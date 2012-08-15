@@ -63,7 +63,7 @@ switch ($metodo) {
   
 		}
     break;
-    case "obtieneHoras":
+    case "leeHoras":
 
       $idSala = validaParam($_GET["idSala"]);
       $dia = validaParam($_GET["dia"]);

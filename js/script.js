@@ -104,7 +104,7 @@ $.ajax({
 	type: "GET",
 	contentType: "application/json; charset=utf-8",
 	data:{
-		metodo:"leeHoras",
+		metodo:"obtieneHoras",
 		idSala:pIdSala
 	},
 	success: function (data) {
