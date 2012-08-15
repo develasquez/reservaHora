@@ -52,6 +52,8 @@ alert("Debe ingresar la informacion requerida");
 		nombre:$("#txtNombreSolicitante").val(),
 		email:$("#txtEmail").val(),
 		telefono:$("#txtTelefono").val(),
+		empresa:$("#txtEmpresa").val(),
+		cargo:$("#txtCargo").val(),
 		notas:$("#tarNotas").val()
 	}).children().removeClass("oculto")
 	reservaHora();
@@ -156,6 +158,8 @@ var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idH
 			nombreSolicitante: $("#txtNombreSolicitante").val() ,
 			mailSolicitante: $("#txtEmail").val() ,
 			telefonoSolicitante:$("#txtTelefono").val() ,
+			empresa:$("#txtEmpresa").val(),
+			cargo:$("#txtCargo").val(),
 			notas: $("#tarNotas").val() 
 		},
 		success: function (data) {

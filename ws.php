@@ -39,16 +39,18 @@ switch ($metodo) {
 		$nombreSolicitante = validaParam($_GET["nombreSolicitante"]);
 		$mailSolicitante = validaParam($_GET["mailSolicitante"]);
 		$telefonoSolicitante = validaParam($_GET["telefonoSolicitante"]);
+    $empresa = validaParam($_GET["empresa"]);
+    $cargo = validaParam($_GET["cargo"]);
 		$notas = validaParam($_GET["notas"]);
 
 		if($idHora != "noValido" || $idSala != "noValido" || $dia != "noValido" || $hora != "noValido"){
-		$query = "INSERT INTO `horas`(`idSala`, `dia`, `hora`, `nombreSolicitante`, `mailSolicitante`, `telefonoSolicitante`, `notas`, `numeroHora`) ".
-				 "VALUES (".$idSala.",".$dia.",'".$hora."','".$nombreSolicitante."','".$mailSolicitante."','".$telefonoSolicitante."','".$notas."',".$idHora.")"	;
+		$query = "INSERT INTO `horas`(`idSala`, `dia`, `hora`, `nombreSolicitante`, `mailSolicitante`, `telefonoSolicitante`, `notas`,`empresa`,`cargo`, `numeroHora`) ".
+				 "VALUES (".$idSala.",".$dia.",'".$hora."','".$nombreSolicitante."','".$mailSolicitante."','".$telefonoSolicitante."','".$notas."','".$empresa."','".$cargo."',".$idHora.")"	;
     	$link = Conectarse();
      
     	$result=mysql_query($query,$link); 
 
-    	$query2 ="SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas , numeroHora FROM horas";
+    	$query2 ="SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas ,empresa ,cargo, numeroHora FROM horas";
     	$result2=mysql_query($query2,$link); 
     	 $arr = array();
 
@@ -69,7 +71,7 @@ switch ($metodo) {
     
     
     if($idSala != "noValido" || $dia != "noValido"){
-      $query = "SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas , numeroHora FROM horas ".
+      $query = "SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas ,empresa ,cargo, numeroHora FROM horas ".
        " Where idSala=" .$idSala . " ;" ;
       $link = Conectarse();
       $result=mysql_query($query,$link); 
