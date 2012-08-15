@@ -140,7 +140,7 @@ var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idH
 		data: {
 			metodo:"reservaHora",
 			idHora: $(bloque).attr("idHora"),
-			idSala: sala,
+			idSala: nroSala,
 			dia: dia, 
 			hora: $($("#horas1 div")[idHora-1]).text().trim(),
 			nombreSolicitante: $("#txtNombreSolicitante").val() ,
