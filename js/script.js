@@ -185,7 +185,7 @@ $.ajax({
 		idHora:pIdHora
 	},
 	success: function (data) {
-		documen.location.href = "index.html";
+		document.location.href = "index.html";
 	}
 	});
 
