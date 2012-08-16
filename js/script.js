@@ -93,6 +93,7 @@ $("#reservar").on("mouseup",function(){
 $(".btnAtras").on("click",function(){
 	$(".ui-overlay").hide();
 	$("#frmReserva_content").hide();
+	$("#eliminar").hide(); 
 })
 
  $(".bloque").on("dblclick",function(){
@@ -105,6 +106,11 @@ $(".btnAtras").on("click",function(){
 			$("#txthora").val($($("#horas1 div")[idHora-1]).text().trim());
  	}
  }); 
+
+$("#eliminar").on("click",function(){
+debugger;
+	//borraHora()
+})
 
 $(".bloque").on("click",function(){
 	bloque = $(this)
