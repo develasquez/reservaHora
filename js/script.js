@@ -97,7 +97,7 @@ $(".btnAtras").on("click",function(){
 })
 
  $(".bloque").on("dblclick",function(){
- 	if(password = prompt("Password de Administrador"  )){
+ 	if(password == prompt("Password de Administrador"  )){
  			 bloque = $(this)
  			 $("#eliminar").show(); 
 			$(".ui-overlay").show();
