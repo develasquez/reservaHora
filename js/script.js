@@ -3,10 +3,12 @@
 */
 
 var bloque, nroSala =1, dia , hora, mouseDown, posInicio, posFin;
+var password = "vitraux2012";
 
 $(function(){
 	$(".ui-overlay").hide();
 	$("#frmReserva_content").hide();
+	 $("#eliminar").hide(); 
 	$(".sala").on('mousedown',function(a,b,c){
 		
 		mouseDown=true;
@@ -49,6 +51,7 @@ if($("#txtNombreSolicitante").val().length==0 || $("#txtEmail").val().length==0 
 alert("Debe ingresar la informacion requerida");
 }else{
 	$(bloque).data({
+	   idHora:0,
 		nombre:$("#txtNombreSolicitante").val(),
 		email:$("#txtEmail").val(),
 		telefono:$("#txtTelefono").val(),
@@ -84,7 +87,7 @@ $(".bloque").on("click",function(){
  	hora=$(this).attr("idHora");
  })
 
-$(".btnAccion").on("mouseup",function(){
+$("#reservar").on("mouseup",function(){
 	creaBloque();
 })
 $(".btnAtras").on("click",function(){
@@ -92,7 +95,16 @@ $(".btnAtras").on("click",function(){
 	$("#frmReserva_content").hide();
 })
 
-
+ $(".bloque").on("dblclick",function(){
+ 	if(password = prompt("Password de Administrador"  )){
+ 			 bloque = $(this)
+ 			 $("#eliminar").show(); 
+			$(".ui-overlay").show();
+			$("#frmReserva_content").show();
+			var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idHora")) - 9 : parseInt($(bloque).attr("idHora")))
+			$("#txthora").val($($("#horas1 div")[idHora-1]).text().trim());
+ 	}
+ }); 
 
 $(".bloque").on("click",function(){
 	bloque = $(this)
@@ -137,6 +149,7 @@ $.ajax({
 			debugger;
 			var idBloque="#bloque"+ e.numeroHora +"_dia" + e.dia
 	$(idBloque).data({
+	   idHora: e.idHora,	
 		nombre:e.nombreSolicitante,
 		email:e.mailSolicitante,
 		telefono:e.telefonoSolicitante,
@@ -154,7 +167,25 @@ $.ajax({
 }
 
 
+ function borraHora(pIdHora){
 
+$.ajax({
+	url: "ws.php",
+	dataType: "json",
+	type: "GET",
+	contentType: "application/json; charset=utf-8",
+	data:{
+		metodo:"borraHora",
+		idHora:pIdHora
+	},
+	success: function (data) {
+		documen.location.href = "index.html";
+	}
+	});
+
+}
+
+ 
 function reservaHora(){
 
 var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idHora")) - 9 : parseInt($(bloque).attr("idHora")))
@@ -177,7 +208,16 @@ var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idH
 			notas: $("#tarNotas").val() 
 		},
 		success: function (data) {
-		
+		 	$(bloque).data({
+			   idHora: e.idHora,	
+				nombre:e.nombreSolicitante,
+				email:e.mailSolicitante,
+				telefono:e.telefonoSolicitante,
+				empresa:e.empresa,
+				cargo:e.cargo,
+				notas:e.notas
+			})
+ 		
 			$("#txthora").val("");
 			$("#txtEmpresa").val("");
 			$("#txtEmail").val("");

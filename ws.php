@@ -70,7 +70,7 @@ switch ($metodo) {
       $idSala = validaParam($_GET["idSala"]);
     
     
-    if($idSala != "noValido" || $dia != "noValido"){
+    if($idSala != "noValido" ){
       $query = "SELECT idHora, idSala, dia, hora, nombreSolicitante, mailSolicitante, telefonoSolicitante, notas ,empresa ,cargo, numeroHora FROM horas ".
        " Where idSala=" .$idSala . " ;" ;
       $link = Conectarse();
@@ -82,9 +82,20 @@ switch ($metodo) {
       echo json_encode($arr) ;
     }
       break;
-    case 2:
-        echo "i equals 2";
-        break;
+         case "borraHora":
+
+      $idHora = validaParam($_GET["idHora"]);
+    
+    
+    if($idHora!= "noValido" ){
+      $query = "DELETE  FROM horas ".
+       " Where idHora=" .$idHora . " ;" ;
+      $link = Conectarse();
+      $result=mysql_query($query,$link); 
+      
+    }
+      break;
+ 
 }
 
 
@@ -95,6 +106,5 @@ switch ($metodo) {
 
 //KM MARZO 97 SEPT 05
 ?>
-
 
 
