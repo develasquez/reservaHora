@@ -108,8 +108,8 @@ $(".btnAtras").on("click",function(){
  }); 
 
 $("#eliminar").on("click",function(){
-debugger;
-	//borraHora()
+
+	borraHora($(bloque).data().idHora)
 })
 
 $(".bloque").on("click",function(){
