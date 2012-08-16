@@ -21,7 +21,7 @@ $(function(){
 		posFin = a.pageX;
 		var pos = parseInt($("#contenido_salas").css("left") ) ;
 
-		if ((posInicio - posFin)> 10 && pos !=-2000  ) {
+		if ((posInicio - posFin)> 10 && pos !=-2008  ) {
 			nroSala++;
 			posInicio =0;
 			posFin=0;
