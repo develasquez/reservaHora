@@ -92,7 +92,7 @@ switch ($metodo) {
        " Where idHora=" .$idHora . " ;" ;
       $link = Conectarse();
       $result=mysql_query($query,$link); 
-      
+      echo '{"success":true, "data":["status":"ok"], "errors":"" }'; 
     }
       break;
  
