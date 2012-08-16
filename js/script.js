@@ -104,6 +104,16 @@ $(".btnAtras").on("click",function(){
 			$("#frmReserva_content").show();
 			var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idHora")) - 9 : parseInt($(bloque).attr("idHora")))
 			$("#txthora").val($($("#horas1 div")[idHora-1]).text().trim());
+			 
+	var data = $(bloque).data(); 
+		$("#txtNombreSolicitante").val()= data.nombre ;
+		$("#txtEmail").val()= data.email;
+		$("#txtTelefono").val() = data.telefono;
+		$("#txtEmpresa").val() = data.empresa;
+		$("#txtCargo").val()=data.cargo;
+		$("#tarNotas").val() = data.cargo;
+			
+			
  	}
  }); 
 
@@ -185,7 +195,7 @@ $.ajax({
 		idHora:pIdHora
 	},
 	success: function (data) {
-		debugger;
+		alert("Recargue la pagina" );
 		document.location.href = "index.html";
 	}
 	});
