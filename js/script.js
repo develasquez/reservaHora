@@ -106,12 +106,12 @@ $(".btnAtras").on("click",function(){
 			$("#txthora").val($($("#horas1 div")[idHora-1]).text().trim());
 			 
 	var data = $(bloque).data(); 
-		$("#txtNombreSolicitante").val()= data.nombre ;
-		$("#txtEmail").val()= data.email;
-		$("#txtTelefono").val() = data.telefono;
-		$("#txtEmpresa").val() = data.empresa;
-		$("#txtCargo").val()=data.cargo;
-		$("#tarNotas").val() = data.cargo;
+		$("#txtNombreSolicitante").val()= data.nombre );
+		$("#txtEmail").val( data.email);
+		$("#txtTelefono").val( data.telefono);
+		$("#txtEmpresa").val( data.empresa);
+		$("#txtCargo").val(data.cargo);
+		$("#tarNotas").val( data.cargo);
 			
 			
  	}
