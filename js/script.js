@@ -216,13 +216,13 @@ var idHora = (parseInt($(bloque).attr("idHora"))>9? parseInt($(bloque).attr("idH
 		},
 		success: function (data) {
 		 	$(bloque).data({
-			   idHora: e.idHora,	
-				nombre:e.nombreSolicitante,
-				email:e.mailSolicitante,
-				telefono:e.telefonoSolicitante,
-				empresa:e.empresa,
-				cargo:e.cargo,
-				notas:e.notas
+			   idHora: data.idHora,	
+				nombre:data.nombreSolicitante,
+				email:data.mailSolicitante,
+				telefono:data.telefonoSolicitante,
+				empresa:data.empresa,
+				cargo:data.cargo,
+				notas:data.notas
 			})
  		
 			$("#txthora").val("");
